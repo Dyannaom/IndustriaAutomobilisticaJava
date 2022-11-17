@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Getter
 @Setter
@@ -19,7 +20,9 @@ public class Estoque {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Produto produto;
+    @OneToMany(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "estoque_id")
+    private List<Produto> produto;
     private int quantidade;
     private int quantidadeMaxima;
     private int quantidadeMinima;

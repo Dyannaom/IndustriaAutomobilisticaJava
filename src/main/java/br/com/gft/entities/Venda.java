@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -15,7 +16,8 @@ import javax.persistence.*;
 @Table(name = "tb_venda")
 public class Venda extends Pedido{
 
-    @OneToOne
-    private Cliente cliente;
+    @OneToMany(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "venda_id")
+    private List<ItemVenda> itens;
 
 }
