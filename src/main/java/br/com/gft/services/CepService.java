@@ -1,4 +1,4 @@
-package br.com.gft.services.cepService;
+package br.com.gft.services;
 
 import br.com.gft.responses.CepResponse;
 import org.springframework.stereotype.Service;

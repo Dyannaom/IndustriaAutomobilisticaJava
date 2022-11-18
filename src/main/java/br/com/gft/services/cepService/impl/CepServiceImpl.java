@@ -1,7 +1,8 @@
 package br.com.gft.services.cepService.impl;
 
 import br.com.gft.responses.CepResponse;
-import br.com.gft.services.cepService.CepService;
+import br.com.gft.services.CepService;
+
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 

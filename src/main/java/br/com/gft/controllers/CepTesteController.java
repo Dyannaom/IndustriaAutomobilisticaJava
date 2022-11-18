@@ -1,7 +1,8 @@
 package br.com.gft.controllers;
 
 import br.com.gft.responses.CepResponse;
-import br.com.gft.services.cepService.CepService;
+import br.com.gft.services.CepService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
