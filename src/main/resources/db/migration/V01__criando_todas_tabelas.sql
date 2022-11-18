@@ -88,6 +88,7 @@ valorTotal DECIMAL(19,2) NOT NULL
 CREATE TABLE tb_item_compra (
 id BIGINT AUTO_INCREMENT PRIMARY KEY,
 produto_id BIGINT NOT NULL,
+quantidade INT NOT NULL,
 compra_id BIGINT,
 FOREIGN KEY(produto_id) REFERENCES tb_produto(produto_id),
 FOREIGN KEY(compra_id) REFERENCES tb_compra(id)
@@ -96,6 +97,7 @@ FOREIGN KEY(compra_id) REFERENCES tb_compra(id)
 CREATE TABLE tb_item_venda (
 id BIGINT AUTO_INCREMENT PRIMARY KEY,
 produto_id BIGINT NOT NULL,
+quantidade INT NOT NULL,
 venda_id BIGINT,
 FOREIGN KEY(produto_id) REFERENCES tb_produto(produto_id),
 FOREIGN KEY(venda_id) REFERENCES tb_venda(id)
